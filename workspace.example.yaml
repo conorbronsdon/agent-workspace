@@ -1,0 +1,21 @@
+# workspace.example.yaml
+#
+# Copy to `workspace.yaml` at your project root to override the defaults. Every key is
+# optional — delete the ones you're happy with. The values shown here ARE the defaults, so
+# an empty or absent workspace.yaml behaves identically to this file.
+#
+# Full reference: docs/state-model.md
+
+state_dir: state/            # directory holding current.md, decisions.md, etc.
+sessions_dir: sessions/      # directory holding dated session logs (YYYY-MM-DD.md)
+task_files: TODO.md          # file (or YAML list of files) scanned for deadlines/overdue
+
+staleness:
+  current_days: 3            # flag current.md when older than this many days
+  weekly_days: 5             # flag weekly-priorities.md when older than this
+  blockers_days: 7           # flag blockers.md when older than this
+
+# task_files also accepts a list:
+# task_files:
+#   - TODO.md
+#   - planning/roadmap.md

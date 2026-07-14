@@ -3,6 +3,11 @@
 Memory and hygiene for agent workspaces — the lifecycle skills that give an AI coding agent
 a persistent, self-maintaining sense of *where a project is*.
 
+<p align="center">
+  <img src="docs/demo.gif" width="820"
+       alt="Terminal demo of a simulated Claude Code session: /start produces a briefing (date, state freshness, files changed since last session, top priorities, and 'What's the focus today?'), then /end extracts a session summary with topics, decisions and their rejected alternatives, next actions, and a git safety check." />
+</p>
+
 Agent sessions are ephemeral: close the terminal and the context is gone. These six skills
 fix that with a small set of state files and the commands that keep them fresh — so every
 session starts where the last one left off, decisions are recorded with the paths not

@@ -98,6 +98,11 @@ These skills graduated from the
 per-command skills, and `reconcile` + `recover` moved here too. This repo is now their home;
 the collection's copies track it.
 
+
+## Disclaimer
+
+*This is an independent personal project, not affiliated with, sponsored by, or endorsed by any company. All views expressed are my own.*
+
 ## License
 
 MIT — see [LICENSE](LICENSE).

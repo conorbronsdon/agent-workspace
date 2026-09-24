@@ -1,5 +1,7 @@
 # agent-workspace
 
+> **Maintenance mode.** This project is stable and receives security fixes. New features aren't planned, but issues and pull requests are still welcome.
+
 Memory and hygiene for agent workspaces — the lifecycle skills that give an AI coding agent
 a persistent, self-maintaining sense of *where a project is*.
 

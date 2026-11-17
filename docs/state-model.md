@@ -109,9 +109,10 @@ git rev-parse --git-dir >/dev/null 2>&1 || { echo "not a git repository"; }
 
 - `start` / `today` skip the "what changed since last session" git scan and continue with
   file-based freshness and deadline checks.
-- `reconcile` / `recover` print "not a git repository — nothing to reconcile/recover" and
-  exit cleanly. Their file-consistency and SSOT checks (reconcile) still run if state files
-  exist.
+- `recover` prints "not a git repository — nothing to recover" and exits cleanly: it
+  inspects only worktrees and branches.
+- `reconcile` skips its git steps (commit history and branch diffs) but still runs its
+  file-consistency and SSOT checks if state files exist.
 
 ## Design principles (shared)
 

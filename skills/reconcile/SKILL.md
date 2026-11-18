@@ -28,8 +28,11 @@ Read the optional `workspace.yaml` at the project root for where state lives. Be
 
 ### 0. Detect the default branch
 
+Outside a git repository there are no branches to compare: skip steps 1–2, say so in the
+report, and still run the file-based checks in steps 3–4 against the state files.
+
 ```bash
-git rev-parse --git-dir >/dev/null 2>&1 || { echo "not a git repository — nothing to reconcile"; exit 0; }
+git rev-parse --git-dir >/dev/null 2>&1 || { echo "not a git repository — skipping branch checks (steps 1–2)"; exit 0; }
 DEFAULT=$(git symbolic-ref --short refs/remotes/origin/HEAD 2>/dev/null | sed 's|^origin/||')
 DEFAULT=${DEFAULT:-$(git remote show origin 2>/dev/null | sed -n 's/.*HEAD branch: //p')}
 DEFAULT=${DEFAULT:-main}   # no remote configured — fall back and say so in the report
